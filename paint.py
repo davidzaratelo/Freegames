@@ -14,6 +14,7 @@ from turtle import *
 from freegames import vector
 
 def line(start, end):
+"Se cambia la linea a color verde "
     color('green')
     "Draw line from start to end."
     up()
