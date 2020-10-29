@@ -16,6 +16,7 @@ from freegames import vector
 def line(start, end):
     "Draw line from start to end."
     up()
+    #5) Add width parameter of 30
     width(30)
     goto(start.x, start.y)
     down()
@@ -24,6 +25,7 @@ def line(start, end):
 def square(start, end):
     "Draw square from start to end."
     up()
+    #5) Add width parameter of 30
     width(30)
     goto(start.x, start.y)
     down()
@@ -37,16 +39,19 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
+    #5) Add width parameter of 30
     width(30)
     pass  # TODO
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+    #5) Add width parameter of 30
     width(30)
     pass  # TODO
 
 def triangle(start, end):
     "Draw triangle from start to end."
+    #5) Add width parameter of 30
     width(30)
     pass  # TODO
 
