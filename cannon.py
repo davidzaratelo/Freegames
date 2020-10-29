@@ -22,9 +22,9 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        #4) Se cambia la velocidad en x para ball, inicialmente era (x+200)/25 y haciendo el cambio ahora es más rapida ball
+        #Se cambia la velocidad en x para ball, inicialmente era (x+200)/25 y haciendo el cambio ahora es más rapida ball
         speed.x = (x + 600) / 25
-        #4) Se cambia la velocidad en x para ball, inicialmente era (x+200)/25 y haciendo el cambio ahora es más rapida ball
+        #Se cambia la velocidad en y para ball, inicialmente era (y+200)/25 y haciendo el cambio ahora es más rapida ball
         speed.y = (y + 600) / 25
 
 def inside(xy):
@@ -53,11 +53,11 @@ def move():
         targets.append(target)
 
     for target in targets:
-        target.x -= 0.5
+        #Se cambia la velocidad de los targets a 7
+        target.x -= 7
 
     if inside(ball):
-    #2) Se cambia la gravedad de la bala del canon, haciendo que sea de 0.1 en vez de 0.95, lo que causa que la bala llegue más lejos
-        speed.y -= 0.1
+        speed.y -= 0.95
         ball.move(speed)
 
     dupe = targets.copy()
