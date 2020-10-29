@@ -22,8 +22,10 @@ def tap(x, y):
     if not inside(ball):
         ball.x = -199
         ball.y = -199
-        speed.x = (x + 200) / 25
-        speed.y = (y + 200) / 25
+        #4) Se cambia la velocidad en x para ball, inicialmente era (x+200)/25 y haciendo el cambio ahora es más rapida ball
+        speed.x = (x + 600) / 25
+        #4) Se cambia la velocidad en x para ball, inicialmente era (x+200)/25 y haciendo el cambio ahora es más rapida ball
+        speed.y = (y + 600) / 25
 
 def inside(xy):
     "Return True if xy within screen."
