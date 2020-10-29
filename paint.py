@@ -14,8 +14,6 @@ from turtle import *
 from freegames import vector
 
 def line(start, end):
-#Se cambia la linea a color verde
-    color('green')
     "Draw line from start to end."
     up()
     goto(start.x, start.y)
@@ -68,6 +66,10 @@ setup(420, 420, 370, 0)
 onscreenclick(tap)
 listen()
 onkey(undo, 'u')
+#1) se añade el color amarillo
+onkey(lambda: color('yellow'),'Y')
+#1) se añade el color café
+onkey(lambda: color ('brown'), 'T')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
