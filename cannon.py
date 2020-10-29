@@ -54,7 +54,8 @@ def move():
         target.x -= 0.5
 
     if inside(ball):
-        speed.y -= 0.35
+    #2) Se cambia la gravedad de la bala del canon, haciendo que sea de 0.1 en vez de 0.95, lo que causa que la bala llegue más lejos
+        speed.y -= 0.1
         ball.move(speed)
 
     dupe = targets.copy()
