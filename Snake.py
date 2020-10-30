@@ -1,3 +1,5 @@
+#Este codigo tiene el poroposito de generar  un juego de snake mediante vectores
+#Se importan funciones de libreria turtle, freegames, y random
 from turtle import *
 from random import randrange
 from random import randint
@@ -15,10 +17,13 @@ def change(x, y):
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
-
+}
+#La fucnion moveFood tiene el porposito de mover la comida del juego un valor
+#a la vez a una direccion aleatoria, cada vez que se mueve la serpeinte.
 def moveFood(food):
-    XoY = randint (1, 2)
+    XoY = randint (1, 2) #Se genera un numero aleatoria de 1 o 2
 
+    #Si el numero es 1 se mueve una direccion en x aleatoria
     if XoY == 1:
         moveX = randrange (-1, 2, 2) * 10
         if inside(food):
@@ -26,6 +31,7 @@ def moveFood(food):
         else:
             food.x += moveX * -1
 
+    #Si el numero es 2 se mueve una direccion en y aleatoria
     if XoY == 2:
         moveY = randrange (-1, 2, 2) * 10
         if inside(food):
@@ -60,6 +66,7 @@ def move():
     square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
+    #Se mueve la comida cada vez que se mueve la serpeinte con moveFood
     ontimer(moveFood(food), 600)
 
 
