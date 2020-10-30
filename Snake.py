@@ -17,7 +17,7 @@ def change(x, y):
 def inside(head):
     "Return True if head inside boundaries."
     return -200 < head.x < 190 and -200 < head.y < 190
-}
+
 #La fucnion moveFood tiene el porposito de mover la comida del juego un valor
 #a la vez a una direccion aleatoria, cada vez que se mueve la serpeinte.
 def moveFood(food):
